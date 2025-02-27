@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'pluginever/wp-content-pilot',
-        'pretty_version' => 'v2.0.7',
-        'version' => '2.0.7.0',
-        'reference' => 'b86327cbefd6f06531f3f7cd3c307c1735b96717',
+        'pretty_version' => 'v2.0.8',
+        'version' => '2.0.8.0',
+        'reference' => 'b3bd725617e946164cf1f4c06f3799bb6f7a707d',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'pluginever/wp-content-pilot' => array(
-            'pretty_version' => 'v2.0.7',
-            'version' => '2.0.7.0',
-            'reference' => 'b86327cbefd6f06531f3f7cd3c307c1735b96717',
+            'pretty_version' => 'v2.0.8',
+            'version' => '2.0.8.0',
+            'reference' => 'b3bd725617e946164cf1f4c06f3799bb6f7a707d',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
