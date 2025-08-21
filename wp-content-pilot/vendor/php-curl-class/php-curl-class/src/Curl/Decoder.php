@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Curl;
 
 class Decoder
@@ -7,25 +9,16 @@ class Decoder
     /**
      * Decode JSON
      *
-     * @access public
-     * @param  $json
-     * @param  $assoc
-     * @param  $depth
-     * @param  $options
+     * @param $json
+     * @param $assoc
+     * @param $depth
+     * @param $options
      */
     public static function decodeJson()
     {
         $args = func_get_args();
-
-        // Call json_decode() without the $options parameter in PHP
-        // versions less than 5.4.0 as the $options parameter was added in
-        // PHP version 5.4.0.
-        if (version_compare(PHP_VERSION, '5.4.0', '<')) {
-            $args = array_slice($args, 0, 3);
-        }
-
         $response = call_user_func_array('json_decode', $args);
-        if ($response === null) {
+        if ($response === null && isset($args['0'])) {
             $response = $args['0'];
         }
         return $response;
@@ -34,18 +27,17 @@ class Decoder
     /**
      * Decode XML
      *
-     * @access public
-     * @param  $data
-     * @param  $class_name
-     * @param  $options
-     * @param  $ns
-     * @param  $is_prefix
+     * @param $data
+     * @param $class_name
+     * @param $options
+     * @param $ns
+     * @param $is_prefix
      */
     public static function decodeXml()
     {
         $args = func_get_args();
         $response = @call_user_func_array('simplexml_load_string', $args);
-        if ($response === false) {
+        if ($response === false && array_key_exists('0', $args)) {
             $response = $args['0'];
         }
         return $response;

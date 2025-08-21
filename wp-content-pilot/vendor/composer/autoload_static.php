@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4
+class ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be
 {
     public static $prefixLengthsPsr4 = array (
         'C' => 
@@ -23,6 +23,7 @@ class ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'Curl\\ArrayUtil' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/ArrayUtil.php',
+        'Curl\\BaseCurl' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/BaseCurl.php',
         'Curl\\CaseInsensitiveArray' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/CaseInsensitiveArray.php',
         'Curl\\Curl' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/Curl.php',
         'Curl\\Decoder' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/Decoder.php',
@@ -35,9 +36,9 @@ class ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit6a6d8dfce569447390e0325d2ab638f4::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be::$classMap;
 
         }, null, ClassLoader::class);
     }

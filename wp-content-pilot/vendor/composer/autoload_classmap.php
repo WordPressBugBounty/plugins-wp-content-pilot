@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Curl\\ArrayUtil' => $vendorDir . '/php-curl-class/php-curl-class/src/Curl/ArrayUtil.php',
+    'Curl\\BaseCurl' => $vendorDir . '/php-curl-class/php-curl-class/src/Curl/BaseCurl.php',
     'Curl\\CaseInsensitiveArray' => $vendorDir . '/php-curl-class/php-curl-class/src/Curl/CaseInsensitiveArray.php',
     'Curl\\Curl' => $vendorDir . '/php-curl-class/php-curl-class/src/Curl/Curl.php',
     'Curl\\Decoder' => $vendorDir . '/php-curl-class/php-curl-class/src/Curl/Decoder.php',
