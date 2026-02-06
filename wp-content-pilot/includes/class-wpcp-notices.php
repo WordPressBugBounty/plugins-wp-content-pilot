@@ -52,7 +52,8 @@ class WPCP_Admin_Notices {
 	 * @since 1.0.0
 	 */
 	private static $predefined_notices = array(
-		'upgrade_notice' => 'upgrade_notice',
+		'black_friday_2025' => 'black_friday_2025',
+		// 'upgrade_notice' => 'upgrade_notice',
 	);
 
 	/**
@@ -296,7 +297,7 @@ class WPCP_Admin_Notices {
 		if ( defined( 'WPCP_PRO_VERSION' ) ) {
 			return;
 		}
-		$notice  = __( '<b>WP Content Pilot</b> is powering <b>5000+ companies</b> in generating automatic contents and affiliation with its <b>25+</b> types of campaign. Upgrade to Pro now & get 10% discount using coupon <strong>WPCPFREE2PRO</strong>', 'wp-content-pilot' );
+		$notice  = __( '<b>Content Pilot</b> is powering <b>5000+ companies</b> in generating automatic contents and affiliation with its <b>25+</b> types of campaign. Upgrade to Pro now & get 10% discount using coupon <strong>WPCPFREE2PRO</strong>', 'wp-content-pilot' );
 		$notice .= '  <a href="https://wpcontentpilot.com/?utm_source=admin-notice&utm_campaign=getpro&utm_medium=admin-dashboard" class="button button-pro promo-btn" target="_blank">Upgrade to Pro</a>';
 
 		self::add_dismissible_notice(
@@ -309,13 +310,41 @@ class WPCP_Admin_Notices {
 	}
 
 	/**
+	 * Add 'black_friday_2025' notice.
+	 *
+	 * @since  2.1.6
+	 * @return void
+	 */
+	public static function black_friday_2025() {
+		if ( defined( 'WPCP_PRO_VERSION' ) ) {
+			return;
+		}
+
+		// Black Friday offer notice.
+		$current_time          = absint( wp_date( 'U' ) );
+		$black_friday_end_time = strtotime( '2025-12-05 00:00:00' );
+		if ( $current_time > $black_friday_end_time ) {
+			return;
+		}
+		$notice  = __( '<b>🖤 Black Friday Mega Sale!</b> Enjoy 40% OFF on all Content Pilot Pro plans. Use coupon code <strong>BFCM25</strong> at checkout. Don\'t miss out on this limited-time offer! 🛍️ &nbsp;&nbsp;', 'wp-content-pilot' );
+		$notice .= '&nbsp;<a href="https://wpcontentpilot.com/pricing/?utm_source=admin-notice&utm_campaign=black_friday_2025&utm_medium=admin-dashboard&discount=BFCM25" class="button button-pro promo-btn" target="_blank">Claim Your Discount</a>';
+		self::add_dismissible_notice(
+			$notice,
+			array(
+				'type'          => 'native notice-info',
+				'dismiss_class' => 'black_friday_2025',
+			)
+		);
+	}
+
+	/**
 	 * Add 'spinner_support' notice.
 	 *
 	 * @since  1.2.6
 	 * @return void
 	 */
 	public static function spinner_notice() {
-		$notice = sprintf( /* translators: 1. HTML anchor tag, 2. HTML anchor end tag */ __( 'The most wanted feature <b>article spinner</b> is now available with <b>WP Content Pilot</b>. We have integrated spinrewriter support. If you do not have account %1$ssignup now%2$s and configure in settings page.', 'wp-content-pilot' ), '<a href="https://bit.ly/spinrewriterpluginever" target="_blank">', '</a>' );
+		$notice = sprintf( /* translators: 1. HTML anchor tag, 2. HTML anchor end tag */ __( 'The most wanted feature <b>article spinner</b> is now available with <b>Content Pilot</b>. We have integrated spinrewriter support. If you do not have account %1$ssignup now%2$s and configure in settings page.', 'wp-content-pilot' ), '<a href="https://bit.ly/spinrewriterpluginever" target="_blank">', '</a>' );
 		self::add_dismissible_notice(
 			$notice,
 			array(

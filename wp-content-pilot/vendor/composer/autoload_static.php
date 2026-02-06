@@ -7,14 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be
 {
     public static $prefixLengthsPsr4 = array (
-        'C' => 
+        'C' =>
         array (
             'Curl\\' => 5,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Curl\\' => 
+        'Curl\\' =>
         array (
             0 => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl',
         ),
@@ -30,6 +30,7 @@ class ComposerStaticInita352656a6d1ecaeb03bd8058a45ab6be
         'Curl\\Encoder' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/Encoder.php',
         'Curl\\MultiCurl' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/MultiCurl.php',
         'Curl\\StringUtil' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/StringUtil.php',
+        'Curl\\TimeUtil' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/TimeUtil.php',
         'Curl\\Url' => __DIR__ . '/..' . '/php-curl-class/php-curl-class/src/Curl/Url.php',
     );
 

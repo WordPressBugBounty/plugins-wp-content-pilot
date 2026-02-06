@@ -2,7 +2,7 @@
 /**
  * WPCP_Module Class.
  *
- * @package     WP Content Pilot
+ * @package     Content Pilot
  * @subpackage  Module
  * @copyright   Copyright (c) 2019, MD Sultan Nasir Uddin(manikdrmc@gmail.com)
  * @license     http://opensource.org/licenses/gpl-2.0.php GNU Public License.
@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit();
 /**
  * WPCP_Module Class.
  *
- * @package WP Content Pilot
+ * @package Content Pilot
  * @since 1.2.0
  */
 abstract class WPCP_Module {
@@ -519,7 +519,7 @@ abstract class WPCP_Module {
 	 */
 	protected function deactivate_key( $campaign_id, $key, $hours = 1 ) {
 		wpcp_logger()->warning( sprintf( 'Deactivating key [%s] for [%d] hour', $key, $hours ), $campaign_id );
-		$deactivated_until = current_time( 'timestamp' ) + ( $hours * HOUR_IN_SECONDS );
+		$deactivated_until = current_time( 'mysql' ) + ( $hours * HOUR_IN_SECONDS );
 		update_post_meta( $campaign_id, '_' . md5( $key ), $deactivated_until );
 	}
 
@@ -534,7 +534,7 @@ abstract class WPCP_Module {
 	 */
 	protected function is_deactivated_key( $campaign_id, $key ) {
 		$deactivated_until = wpcp_get_post_meta( $campaign_id, '_' . md5( $key ), '' );
-		if ( empty( $deactivated_until ) || $deactivated_until < current_time( 'timestamp' ) ) {
+		if ( empty( $deactivated_until ) || $deactivated_until < current_time( 'mysql' ) ) {
 			return false;
 		}
 

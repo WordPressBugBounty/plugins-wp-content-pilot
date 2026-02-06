@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'pluginever/wp-content-pilot',
-        'pretty_version' => 'v2.1.4',
-        'version' => '2.1.4.0',
-        'reference' => 'a6b89b1535ba5028dd8d5468be4690a241f341d5',
+        'pretty_version' => 'v2.1.9',
+        'version' => '2.1.9.0',
+        'reference' => '044948385804fd215d9e24e38be59a7b27925657',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,18 +11,18 @@
     ),
     'versions' => array(
         'php-curl-class/php-curl-class' => array(
-            'pretty_version' => '12.0.0',
-            'version' => '12.0.0.0',
-            'reference' => '7a8f05efb18bb865dbce864b8fd34d4f5d920c74',
+            'pretty_version' => '12.0.3',
+            'version' => '12.0.3.0',
+            'reference' => 'f910932317aa002c535894ed198d7827cfa1de56',
             'type' => 'library',
             'install_path' => __DIR__ . '/../php-curl-class/php-curl-class',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
         'pluginever/wp-content-pilot' => array(
-            'pretty_version' => 'v2.1.4',
-            'version' => '2.1.4.0',
-            'reference' => 'a6b89b1535ba5028dd8d5468be4690a241f341d5',
+            'pretty_version' => 'v2.1.9',
+            'version' => '2.1.9.0',
+            'reference' => '044948385804fd215d9e24e38be59a7b27925657',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
